@@ -118,7 +118,7 @@ const DarkNavbar = () => {
         </section>
         <section id="navigation" className="hidden md:gap-20 gap-12">
           <hr className="my-5 border-gray-800" />
-          <div className="flex">
+          <div className="flex overflow-x-auto">
             <Link
               to="/"
               onClick={() => {

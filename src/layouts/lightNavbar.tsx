@@ -129,14 +129,14 @@ const LightNavbar = () => {
         </section>
         <section id="navigation" className="hidden md:gap-20 gap-12">
           <hr className="my-5 border-gray-800" />
-          <div className="flex">
+          <div className="flex overflow-x-auto ">
             <Link
               to="/"
               onClick={() => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className="  lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
                 <FaHome className="md:inline-block hidden" />
                 Beranda
               </span>
@@ -147,7 +147,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
                 <FaNewspaper className="md:inline-block hidden" />
                 Berita
               </span>
@@ -158,7 +158,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
                 <FaGlobe className="md:inline-block hidden" />
                 Ragam
               </span>
@@ -169,7 +169,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
                 <FaMapLocation className="md:inline-block hidden" />
                 Peta Interaktif
               </span>
@@ -180,7 +180,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
                 <FaBell className="md:inline-block hidden" />
                 Subscription
               </span>
@@ -191,7 +191,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
                 <FaBell className="md:inline-block hidden" />
                 Event
               </span>

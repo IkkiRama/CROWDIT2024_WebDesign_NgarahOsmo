@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import GoogleMapComponent from "../components/googlemap";
 import { FaMapLocation } from "react-icons/fa6";
 import DarkNavbar from "../layouts/darkNavbar";
 
 export default function Map() {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,6 +25,7 @@ export default function Map() {
         </span>
         Peta Interaktif
       </h1>
+
 
       <br />
       <GoogleMapComponent />

@@ -17,7 +17,7 @@ const center = {
   lng: 113.9213,
 };
 
-const dataMarker = [
+const dataMarkerTarian = [
   {
     title: "Tari Saman",
     from: "Nanggoroe Aceh Darussalam",
@@ -281,29 +281,9 @@ const dataMarker = [
       lng: parseFloat(138.2541689),
     },
   },
+];
 
-  //
-
-  {
-    title: "Makanan Lontong Balap",
-    from: "Jawa Timur",
-    image: "makananLontongbalap.jpg",
-    type: "makanan",
-    longlat: {
-      lat: parseFloat(-7.5214457),
-      lng: parseFloat(112.1756567),
-    },
-  },
-  {
-    title: "Makanan Pallubasa",
-    from: "Sulawesi Tenggara",
-    image: "makananPallubasa.jpg",
-    type: "makanan",
-    longlat: {
-      lat: parseFloat(-3.4661838),
-      lng: parseFloat(121.8376521),
-    },
-  },
+const dataMarkerMakanan = [
   {
     title: "Makanan Sagu Lempeng",
     from: "Papua",
@@ -312,6 +292,369 @@ const dataMarker = [
     longlat: {
       lat: parseFloat(-3.1770942),
       lng: parseFloat(136.2786475),
+    },
+  },
+  {
+    title: "Makanan Karedok",
+    from: "Jawa Barat",
+    image: "makananKaredok.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-7.087537156984174),
+      lng: parseFloat(107.67009018624591),
+    },
+  },
+  {
+    title: "Makanan Ketan Srikaya",
+    from: "Balikpapan",
+    image: "makananKetansrikayabalikpapan.jpeg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-1.2372341494899792),
+      lng: parseFloat(116.85161721484499),
+    },
+  },
+  {
+    title: "Makanan Lontong Balap",
+    from: "Surabaya",
+    image: "makananLontongbalap.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-7.257562045119448),
+      lng: parseFloat(112.75731155670935),
+    },
+  },
+  {
+    title: "Makanan Pallu Basa",
+    from: "Makasar",
+    image: "makananPallubasa.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-5.161835488233071),
+      lng: parseFloat(119.43635484207643),
+    },
+  },
+  {
+    title: "Makanan Papeda",
+    from: "Papua, Maluku",
+    image: "makananPapeda.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-3.238299001467056),
+      lng: parseFloat(130.14514758957023),
+    },
+  },
+  {
+    title: "Makanan Papeda",
+    from: "Papua, Maluku",
+    image: "makananPapeda.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-4.24561954044678),
+      lng: parseFloat(138.0125807044555),
+    },
+  },
+  {
+    title: "Makanan Pempek",
+    from: "Palembang",
+    image: "makananPempek.jpeg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-2.975537283507079),
+      lng: parseFloat(104.76742356634045),
+    },
+  },
+  {
+    title: "Makanan Sate Padang",
+    from: "Padang Panjang",
+    image: "makananSatepadang.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-0.46633632626849936),
+      lng: parseFloat(100.39887560896155),
+    },
+  },
+  {
+    title: "Makanan Tinutuan",
+    from: "Manado",
+    image: "makananTinutuan.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(1.4748650368589118),
+      lng: parseFloat(124.8427728562918),
+    },
+  },
+  {
+    title: "Makanan Mie Aceh",
+    from: "Aceh",
+    image: "mieaceh.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(4.6953884249521),
+      lng: parseFloat(96.74980796240025),
+    },
+  },
+  {
+    title: "Makanan Bika Ambon",
+    from: "Medan",
+    image: "BikaAmbon.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(3.5929315093427716),
+      lng: parseFloat(98.6626102293373),
+    },
+  },
+  {
+    title: "Makanan Rendang",
+    from: "Minangkabau",
+    image: "Rendang.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-0.7292205429411924),
+      lng: parseFloat(100.74622656118805),
+    },
+  },
+  {
+    title: "Makanan Gulai Belacan",
+    from: "Riau",
+    image: "GulaiBelacan.jpeg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(0.29557080532370605),
+      lng: parseFloat(101.70492929401004),
+    },
+  },
+  {
+    title: "Makanan Rujak Cingur",
+    from: "Surabaya",
+    image: "RujakCingur.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-7.272546970145737),
+      lng: parseFloat(112.69517014062417),
+    },
+  },
+  {
+    title: "Makanan Sate Bandeng",
+    from: "Banten",
+    image: "SateBandeng.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-6.4019851311123706),
+      lng: parseFloat(106.0605861097671),
+    },
+  },
+  {
+    title: "Makanan Tempoyak Ikan Patin",
+    from: "Jambi",
+    image: "TempoyakIkanPatin.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-1.461415412895813),
+      lng: parseFloat(102.48971264530955),
+    },
+  },
+  {
+    title: "Makanan Pendap",
+    from: "Bengkulu",
+    image: "Pendap.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-3.7910854885699496),
+      lng: parseFloat(102.26165923126008),
+    },
+  },
+  {
+    title: "Makanan Seruit",
+    from: "Lampung",
+    image: "Seruit.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-4.561686966037032),
+      lng: parseFloat(105.37428588867719),
+    },
+  },
+  {
+    title: "Makanan Mie Bangka",
+    from: "Bangka Belitung",
+    image: "MieBangka.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-2.7235223593352296),
+      lng: parseFloat(106.38234439322473),
+    },
+  },
+  {
+    title: "Makanan Mie Lendir",
+    from: "Kepulauan Riau",
+    image: "MieLendir.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(1.1306097275647806),
+      lng: parseFloat(104.05253236952767),
+    },
+  },
+  {
+    title: "Makanan Nasi Gudeg",
+    from: "Daerah Istimewa Yogyakarta",
+    image: "NasiGudeg.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-7.799453051532465),
+      lng: parseFloat(110.37478137966524),
+    },
+  },
+  {
+    title: "Makanan Ayam Taliwang",
+    from: "Nusa Tenggara Barat",
+    image: "AyamTaliwang.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-8.636189315517225),
+      lng: parseFloat(117.37402522510114),
+    },
+  },
+  {
+    title: "Makanan Jagung Bose",
+    from: "Nusa Tenggara Timur",
+    image: "JagungBose.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-8.625153089790473),
+      lng: parseFloat(121.12090567730348),
+    },
+  },
+  {
+    title: "Makanan Bubur Pedas",
+    from: "Kalimantan Barat",
+    image: "BuburPedas.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-0.24062458961357744),
+      lng: parseFloat(111.49589294413269),
+    },
+  },
+  {
+    title: "Makanan Kalumpe",
+    from: "Kalimantan Tengah",
+    image: "Kalumpe.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-1.635441838175342),
+      lng: parseFloat(113.40608856370724),
+    },
+  },
+  {
+    title: "Makanan Soto Banjar",
+    from: "Kalimantan Selatan",
+    image: "SotoBanjar.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-3.138827107519263),
+      lng: parseFloat(115.25197650331218),
+    },
+  },
+  {
+    title: "Makanan Kepiting Soka",
+    from: "Kalimantan Utara",
+    image: "KepitingSoka.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(3.0382978630719957),
+      lng: parseFloat(116.06005269142723),
+    },
+  },
+  {
+    title: "Makanan Palumara",
+    from: "Sulawesi Tengah",
+    image: "Palumara.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-1.4281482950858255),
+      lng: parseFloat(121.44697683174707),
+    },
+  },
+  {
+    title: "Makanan Sop Konro",
+    from: "Sulawesi Selatan",
+    image: "SopKonro.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-3.6825682934971096),
+      lng: parseFloat(119.93954631109294),
+    },
+  },
+  {
+    title: "Makanan Lapa-Lapa",
+    from: "Sulawesi Tenggara",
+    image: "LapaLapa.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-4.13865240480068),
+      lng: parseFloat(122.24379608365871),
+    },
+  },
+  {
+    title: "Makanan Bolu Paranggi",
+    from: "Sulawesi Barat",
+    image: "BoluParanggi.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(-2.8242697335608797),
+      lng: parseFloat(119.10802133965353),
+    },
+  },
+  {
+    title: "Makanan Binte Biluhuta",
+    from: "Gorontalo",
+    image: "binte-biluhuta.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(0.5324432000377385),
+      lng: parseFloat(123.05924563069142),
+    },
+  },
+  {
+    title: "Makanan Gohu Ikan",
+    from: "Maluku Utara",
+    image: "Gohu Ikan.jpg",
+    type: "makanan",
+    longlat: {
+
+      lat: parseFloat(1.6105619385613243),
+      lng: parseFloat(127.42648304628523),
     },
   },
 ];
@@ -323,8 +666,20 @@ function MyComponent() {
   });
 
   const [selectedMarker, setSelectedMarker] = useState("");
+  const [jenis, setJenis] = useState("Tarian");
 
   return isLoaded ? (
+    <>
+    <div className="flex justify-center items-center mb-5 overflow-x-auto  ">
+        <div onClick={()=> setJenis("Tarian")} className={`font-semibold text-sm sm:text-base py-2 px-8 cursor-pointer flex justify-center items-center sm:py-2 sm:px-12 rounded-md hover:text-white hover:bg-indigo-500 ${jenis === "Tarian" ? 'bg-indigo-500 text-white' : 'bg-slate-300'} `}>
+          <p>Tarian</p>
+        </div>
+
+        <div onClick={()=> setJenis("Makanan")} className={`font-semibold text-sm sm:text-base py-2 px-8 cursor-pointer ml-5 flex justify-center items-center sm:py-2 sm:px-12 rounded-md hover:text-white hover:bg-indigo-500 ${jenis === "Makanan" ? 'bg-indigo-500 text-white' : 'bg-slate-300'} `}>
+          <p>Makanan</p>
+        </div>
+      </div>
+      
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
@@ -335,14 +690,15 @@ function MyComponent() {
       zoom={6}
     >
       <>
-        {dataMarker.map((marker, i) => (
+      {(jenis === "Tarian") ? (
+        dataMarkerTarian.map((marker, i) => (
           <Marker
             key={i}
             position={{
               lat: marker.longlat.lat,
               lng: marker.longlat.lng,
             }}
-            onClick={(e) => {
+            onClick={() => {
               setSelectedMarker(marker);
             }}
             icon={{
@@ -353,7 +709,30 @@ function MyComponent() {
             }}
             animation={"BOUNCE"}
           />
-        ))}
+        ))
+      ) : (
+        dataMarkerMakanan.map((marker, i) => (
+          <Marker
+            key={i}
+            position={{
+              lat: marker.longlat.lat,
+              lng: marker.longlat.lng,
+            }}
+            onClick={() => {
+              setSelectedMarker(marker);
+            }}
+            icon={{
+              url: `./images/mapMarker/Makanan/${marker.image}`,
+              scaledSize: new window.google.maps.Size(40, 40),
+              origin: new window.google.maps.Point(0, 0),
+              anchor: new window.google.maps.Point(20, 20),
+            }}
+            animation={"BOUNCE"}
+          />
+        ))
+      )
+      }
+        
 
         {selectedMarker ? (
           <InfoWindow
@@ -398,6 +777,7 @@ function MyComponent() {
         )}
       </>
     </GoogleMap>
+    </>
   ) : (
     <></>
   );
