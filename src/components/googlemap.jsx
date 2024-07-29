@@ -745,7 +745,7 @@ function MyComponent() {
           >
             <div className="bg-white rounded text-center">
               <img
-                src={`./images/mapMarker/${selectedMarker.image}`}
+                src={(jenis === "Makanan" ? `./images/mapMarker/Makanan/${selectedMarker.image}` : `./images/mapMarker/${selectedMarker.image}`)}
                 width={200}
                 height={200}
                 className="object-cover"
