@@ -245,9 +245,79 @@ export default function RagamIndonesia() {
   return (
     <>
       <DarkNavbar />
-      <HeaderSlider />
 
-      <main className="lg:px-20 md:px-10 px-5 dark:bg-black">
+      <header className="mt-20 relative grid lg:grid-cols-2 pt-10 lg:px-10 px-5 lg:max-h-[700px] max-h-screen overflow-y-hidden after:absolute after:bg-gradient-to-t dark:after:from-black dark:after:to-black/10 after:from-white after:to-white/10 after:w-full after:h-[130px] after:bottom-0">
+        <div className="h-full flex-col justify-center items-center pt-20">
+          <h4 className="text-2xl font-semibold text-red-500 mb-5">
+            Indonesia Kaya
+          </h4>
+          <h1 className="font-semibold dark:text-white text-[#111] lg:text-5xl text-4xl lg:leading-[60px] mb-16">
+            Telusuri Pesona dan <br /> Keberagaman Budaya Indonesia <br /> yang
+            Memukau
+          </h1>
+          <a href="#jelajahi" className="bg-red-500 px-10 py-5 rounded-full text-white">
+            Jelajahi Sekarang
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-5 lg:rotate-3 lg:-mt-20 mt-20 overflow-hidden">
+          <div className="grid grid-cols-1 gap-5 animate-scroll-to-t">
+            <div className="row-span-2 h-[500px] rounded-md overflow-hidden">
+              <img
+                src="https://warisannusantara.vercel.app/images/header/1.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="row-span-2 h-[500px] rounded-md overflow-hidden">
+              <img
+                src="https://i.pinimg.com/736x/b9/78/07/b978077a8ca10c45603baf9bd7581379.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="row-span-2 h-[500px] rounded-md overflow-hidden">
+              <img
+                src="https://i.pinimg.com/564x/8f/47/ab/8f47abdb931c3b44f411c6bdf38dde00.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          {/*  */}
+          <div className="animate-scroll-to-b">
+            <div className="h-[240px] -mt-52 rounded-md overflow-hidden">
+              <img
+                src="https://i.pinimg.com/564x/48/a3/c3/48a3c30b3d068b7ef86c32f19d5ead3b.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="h-[240px] mt-5 rounded-md overflow-hidden">
+              <img
+                src="https://i.pinimg.com/564x/fc/ce/06/fcce0689b975e499e970557f4596df58.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="h-[240px] mt-5 rounded-md overflow-hidden">
+              <img
+                src="https://i.pinimg.com/564x/32/d6/4e/32d64e9f4ab70f413914976e48f8ae81.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="h-[240px] mt-5 rounded-md overflow-hidden">
+              <img
+                src="https://i.pinimg.com/736x/45/1c/3a/451c3a2537616f5d5d06750972b5458e.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="jelajahi" className="lg:px-20 md:px-10 px-5 dark:bg-black">
         <section className="grid lg:grid-cols-2 gap-10 py-7 mt-20 place-items-center">
           <div>
             <h2 className="font-bold md:text-3xl text-xl mb-3 dark:text-gray-100">
@@ -313,9 +383,9 @@ export default function RagamIndonesia() {
               </div>
             </div>
             <div className="lg:block hidden">
-              <button className="px-5 text-sm py-2 rounded border text-purple-500 border-purple-500 hover:bg-purple-500 hover:text-white">
+              <a href="/map" className="px-5 text-sm py-2 rounded border text-purple-500 border-purple-500 hover:bg-purple-500 hover:text-white">
                 Lihat Lebih Lengkap
-              </button>
+              </a>
             </div>
           </div>
           <hr className="dark:border-purple-900" />
@@ -469,9 +539,9 @@ export default function RagamIndonesia() {
               </div>
             </div>
             <div className="lg:block hidden">
-              <button className="px-5 text-sm py-2 rounded border text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white">
+              <a href="/map" className="px-5 text-sm py-2 rounded border text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white">
                 Lihat Lebih Lengkap
-              </button>
+              </a>
             </div>
           </div>
           <hr className="mb-5 dark:border-indigo-900" />
@@ -546,9 +616,9 @@ export default function RagamIndonesia() {
               </div>
             </div>
             <div className="lg:block hidden">
-              <button className="px-5 text-sm py-2 rounded border text-emerald-500 border-emerald-500 hover:bg-emerald-500 hover:text-white">
+              <a href="/map" className="px-5 text-sm py-2 rounded border text-emerald-500 border-emerald-500 hover:bg-emerald-500 hover:text-white">
                 Lihat Lebih Lengkap
-              </button>
+              </a>
             </div>
           </div>
           <hr className="dark:border-emerald-900" />

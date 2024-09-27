@@ -83,15 +83,46 @@ const LightNavbar = () => {
     <>
       <nav className="fixed left-0 right-0 bg-transparent z-50 lg:text-black text-white lg:py-10 md:py-8 py-6 lg:px-24 md:px-12 px-5 transition-all duration-500">
         <section className="flex justify-between">
-          <div className="w-1/2">
+          <div className="w-3/4 lg:w-1/4">
             <h2
-              className="font-bold lg:text-black md:text-2xl text-xl font-dancing-script w-full dark:text-gray-200"
-              style={{ fontFamily: "'Dancing Script', cursive !important" }}
+              className="text-[#111] font-semibold md:text-xl text-base"
             >
               <Link to={"/"}>Warisan Nusantara</Link>
             </h2>
           </div>
-          <div className="md:flex hidden gap-10 items-center justify-end w-1/4">
+          <div className="lg:flex gap-10 hidden items-center justify-end w-1/4 lg:w-1/2 ">
+            <div className="text-right text-white flex">
+              <Link
+                to="/"
+              >
+                <span className="lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3 text-red-500 relative font-semibold after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[80%] after:h-[3px] after:bg-red-500 after:rounded-full">
+                  Beranda
+                </span>
+              </Link>
+              <Link
+                to="/event"
+              >
+                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                  Event
+                </span>
+              </Link>
+              
+              <Link
+                to="/ragam-indonesia"
+              >
+                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                  Ragam Indonesia
+                </span>
+              </Link>
+              <Link
+                to="/news"
+              >
+                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                  Berita
+                </span>
+              </Link>
+            </div>
+
             <BootstrapTooltip
               title={"Ganti Mode"}
               placement="bottom"
@@ -105,17 +136,9 @@ const LightNavbar = () => {
               </span>
             </BootstrapTooltip>
 
-            <div className="w-1/4 text-right text-white">
-              <button
-                onClick={() => {
-                  toggleNavigation();
-                }}
-              >
-                <FaBars />
-              </button>
-            </div>
+            
           </div>
-          <div className="md:hidden flex gap-10 items-center justify-end w-1/4">
+          <div className="lg:hidden flex gap-10 items-center justify-end w-1/4">
             <div className="w-1/4 text-right text-white">
               <button
                 onClick={() => {
@@ -136,53 +159,9 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="  lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
+              <span className="  lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                 <FaHome className="md:inline-block hidden" />
                 Beranda
-              </span>
-            </Link>
-            <Link
-              to="/news"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
-                <FaNewspaper className="md:inline-block hidden" />
-                Berita
-              </span>
-            </Link>
-            <Link
-              to="/ragam-indonesia"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
-                <FaGlobe className="md:inline-block hidden" />
-                Ragam
-              </span>
-            </Link>
-            <Link
-              to="/map"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
-                <FaMapLocation className="md:inline-block hidden" />
-                Peta Interaktif
-              </span>
-            </Link>
-            <Link
-              to="/subscription"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
-                <FaBell className="md:inline-block hidden" />
-                Subscription
               </span>
             </Link>
             <Link
@@ -191,9 +170,31 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className=" lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-3">
+              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                 <FaBell className="md:inline-block hidden" />
                 Event
+              </span>
+            </Link>
+            <Link
+              to="/ragam-indonesia"
+              onClick={() => {
+                toggleNavigation();
+              }}
+            >
+              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                <FaGlobe className="md:inline-block hidden" />
+                Ragam Indonesia
+              </span>
+            </Link>
+             <Link
+              to="/news"
+              onClick={() => {
+                toggleNavigation();
+              }}
+            >
+              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                <FaNewspaper className="md:inline-block hidden" />
+                Berita
               </span>
             </Link>
           </div>

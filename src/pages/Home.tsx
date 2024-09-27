@@ -1,6 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import {
+  IconCalendar,
+  IconEye,
+  IconHeart,
+  IconPaper,
+  IconMessages,
+  IconTicket,
+  IconLocation,
+} from "@irsyadadl/paranoid";
+
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -18,6 +28,7 @@ import {
   FaInstagram,
   FaMapMarkerAlt,
   FaUser,
+  FaQuoteRight,
   FaYoutube,
 } from "react-icons/fa";
 import {
@@ -31,6 +42,7 @@ import LightNavbar from "../layouts/lightNavbar";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [tabActive, setTabActive] = useState("news");
 
   const changeHeaderImg = (img: any) => {
     const headerImg = document.getElementById(
@@ -52,88 +64,61 @@ const Home = () => {
     <>
       <LightNavbar />
 
-      <header className="grid lg:grid-cols-2 relative z-10">
+      <header className="grid lg:grid-cols-2 relative z-10 overflow-hidden">
+        {/* Background Gradient Circle */}
         <span
-          className="w-[1000px] h-[1000px] rounded-full absolute -left-[500px] -top-[500px] -rotate-[60deg]"
+          className="w-[1000px] h-[1000px] rounded-full absolute -left-[500px] -top-[500px] -rotate-[60deg] animate-spin-slow"
           style={{
             backgroundImage:
               "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(239, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
           }}
         ></span>
 
+        {/* Left Section */}
         <section className="relative p-10 flex lg:flex-col sm:flex-row flex-col lg:items-end items-center lg:justify-end justify-between lg:order-1 order-2 lg:gap-0 gap-10">
-          <div className="absolute top-1/2 left-[40px] -translate-y-1/2 z-10 lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-5 hidden">
-            <div className="w-[1px] h-[200px] rounded-full bg-black/70 dark:bg-gray-200/70 cursor-pointer"></div>
-            <div
-              className="w-[25px] h-[25px] rounded-full bg-black/70 cursor-pointer flex items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
-              }}
-            >
-              <FaInstagram className="text-white" />
-            </div>
-            <div className="w-[25px] h-[25px] rounded-full bg-[#1873eb] cursor-pointer flex items-center justify-center">
-              <FaFacebookF className="text-white" />
-            </div>
-            <div className="w-[25px] h-[25px] rounded-full bg-[#f70000] cursor-pointer flex items-center justify-center">
-              <FaYoutube className="text-white" />
-            </div>
-            <div className="w-[1px] h-[200px] rounded-full bg-black/70 dark:bg-gray-200/70 cursor-pointer"></div>
-          </div>
-          <div className="lg:w-[70%] sm:w-[60%] w-full sm:order-1 order-2 lg:mb-20 lg:absolute lg:top-1/2 lg:-translate-y-1/2">
-            <p
-              className="text-sm text-gray-800 dark:text-gray-200 lg:text-right text-left"
+          
+          {/* Big Title */}
+          <div className="lg:w-[80%] sm:w-[60%] w-full sm:order-1 order-2 lg:mb-10">
+            <h1
+              className="text-7xl font-semibold text-red-500 lg:inline-block hidden"
               data-aos="fade-right"
+            >
+              WARISAN <br /> NUSANTARA
+            </h1>
+          </div>
+
+          {/* Description Text */}
+          <div className="lg:w-[80%] sm:w-[60%] w-full sm:order-1 order-2 lg:mb-32">
+
+            <p
+              className="text-sm lg:text-[16px] text-gray-800 dark:text-gray-200 animate-slide-right leading-6"
               data-aos-delay="100"
-              data-aos-once="true"
             >
               {content.header.id}
             </p>
           </div>
+
+          {/* Thumbnails Grid */}
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3 sm:order-2 order-1">
-            <div
-              className="cursor-pointer transition-all hover:scale-110 after:transition-all relative after:content-[''] after:inset-0 after:absolute after:bg-black/30 after:rounded-md hover:after:scale-0 after:scale-100 lg:col-span-1 sm:col-span-2"
-              onClick={() => setOpen(true)}
-              data-aos="fade-left"
-              data-aos-delay="900"
-              data-aos-once="true"
-            >
-              <img
-                src="/images/header/subheader2_thumb.jpg"
-                alt="subheader1"
-                className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
-              />
-            </div>
-            <div
-              className="cursor-pointer transition-all hover:scale-110 after:transition-all relative after:content-[''] after:inset-0 after:absolute after:bg-black/30 after:rounded-md hover:after:scale-0 after:scale-100"
-              onClick={() => setOpen(true)}
-              data-aos="fade-left"
-              data-aos-delay="600"
-              data-aos-once="true"
-            >
-              <img
-                src="/images/header/subheader1_thumb.jpg"
-                alt="subheader1"
-                className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
-              />
-            </div>
-            <div
-              className="cursor-pointer transition-all hover:scale-110 after:transition-all relative after:content-[''] after:inset-0 after:absolute after:bg-black/30 after:rounded-md hover:after:scale-0 after:scale-100"
-              onClick={() => setOpen(true)}
-              data-aos="fade-left"
-              data-aos-delay="300"
-              data-aos-once="true"
-            >
-              <img
-                src="/images/header/subheader3_thumb.jpg"
-                alt="subheader1"
-                className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
-              />
-            </div>
-
-            {/*  */}
-
+            {[
+              { img: "/images/header/subheader2_thumb.jpg", delay: 900 },
+              { img: "/images/header/subheader1_thumb.jpg", delay: 600 },
+              { img: "/images/header/subheader3_thumb.jpg", delay: 300 },
+            ].map((thumb, idx) => (
+              <div
+                key={idx}
+                className="cursor-pointer transition-transform hover:scale-110 after:transition-all relative after:content-[''] after:inset-0 after:absolute after:bg-black/30 after:rounded-md hover:after:scale-0 after:scale-100 lg:col-span-1 sm:col-span-2"
+                onClick={() => setOpen(true)}
+                data-aos="fade-left"
+                data-aos-delay={thumb.delay}
+              >
+                <img
+                  src={thumb.img}
+                  alt={`subheader${idx + 1}`}
+                  className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
+                />
+              </div>
+            ))}
             <Lightbox
               open={open}
               close={() => setOpen(false)}
@@ -144,57 +129,30 @@ const Home = () => {
               ]}
             />
           </div>
-          <h1
-            className="absolute right-[10px] top-[30%] text-8xl font-semibold text-red-500 lg:block hidden"
-            data-aos="fade-right"
-          >
-            WARISAN
-          </h1>
+
         </section>
+
+        {/* Right Section with Image Background */}
         <section className="lg:h-[800px] h-[550px] relative after:content-[''] after:absolute after:inset-0 after:bg-black/30 lg:order-2 order-1">
           <img
             id="headerImg"
-            src="/images/header/1.jpg"
+            src="/images/header/Main Header.jpg"
             alt="headerImg"
             className="h-full w-full object-cover"
           />
-          <div className="absolute top-1/2 sm:right-[40px] right-[20px] -translate-y-1/2 z-10 flex flex-col justify-center items-center gap-10">
-            <div className="w-[1px] lg:h-[200px] h-[100px] rounded-full bg-white/70 cursor-pointer"></div>
-            <div
-              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
-              onClick={() => {
-                changeHeaderImg("/images/header/1.jpg");
-              }}
-            >
-              <h6 className="text-3xl text-white font-bold">1</h6>
-            </div>
-            <div
-              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
-              onClick={() => {
-                changeHeaderImg("/images/header/2.jpg");
-              }}
-            >
-              <h6 className="text-3xl text-white font-bold">2</h6>
-            </div>
-            <div
-              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
-              onClick={() => {
-                changeHeaderImg("/images/header/3.jpg");
-              }}
-            >
-              <h6 className="text-3xl text-white font-bold">3</h6>
-            </div>
-            <div className="w-[1px] lg:h-[200px] h-[100px] rounded-full bg-white/70 cursor-pointer"></div>
-          </div>
+          
+
+          {/* Large Title */}
           <h1
-            className="absolute lg:left-[10px] left-[40px] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 md:text-8xl sm:text-7xl text-5xl sm:text-left text-center font-semibold text-white z-10"
+            className="lg:hidden absolute lg:left-[10px] left-[5%] right-[5%] lg:right-[unset] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 lg:text-8xl sm:text-7xl text-4xl text-center font-semibold text-white z-10"
             data-aos="fade-left"
           >
-            <span className="text-red-500 block lg:hidden">WARISAN</span>
+            <span className="text-red-500 block">WARISAN</span>
             NUSANTARA
           </h1>
         </section>
       </header>
+
 
       <br />
       <br />
@@ -656,170 +614,543 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mb-20">
-        <div className="grid lg:grid-cols-5 gap-10 items-center lg:px-20 md:px-10 px-5 mt-10">
-          <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
-            <img
-              src="/images/header/3.jpg"
-              alt=""
-              className="object-cover h-full w-full"
-              data-aos-once="true"
-              data-aos="fade-left"
-            />
-          </div>
-          <div
-            className="lg:col-span-3"
-            data-aos-once="true"
-            data-aos="fade-right"
+
+      <div className="lg:px-4 mt-10">
+        <div className="mx-auto flex max-w-[1350px] space-x-[1px] lg:justify-center lg:space-x-6">
+
+          <button 
+            className={[ tabActive === "news" ? "bg-red-500 flex-1 text-white" : "bg-red-50 text-red-500 hover:bg-red-100"  ," flex items-center px-4 py-3 text-sm font-semibold transition-colors md:text-base lg:rounded-t-xl lg:px-6  lg:flex-[unset]"].join("")}
+            onClick={() => {
+                setTabActive("news");
+            }}
           >
-            <h5 className="text-red-500 font-semibold md:mb-5 mb-3 md:text-base text-sm">
-              RAGAM BERITA
-            </h5>
-            <Link to="/news/read">
-              <h2 className="font-bold md:text-3xl text-xl dark:text-gray-200">
-                {"INDONESIA DENGAN KEBERAGAMAN BUDAYA NUSANTARA YANG MENDUNIA"}
-              </h2>
-            </Link>
-            <p className="text-gray-800 mt-5 md:text-base text-[12px] dark:text-gray-300">
-              {content.news.highlight.id}
+            <div className="relative h-6 w-6 lg:h-9 lg:w-9">
+              <IconPaper className="w-[30px] h-[30px]" />
+            </div>
+            <span className="ml-3 lg:ml-4 inline">Berita</span>
+          </button>
+
+          <button 
+            className={[ tabActive !== "news" ? "bg-red-500 flex-1 text-white" : "bg-red-50 text-red-500 hover:bg-red-100"  ," flex items-center px-4 py-3 text-sm font-semibold transition-colors md:text-base lg:rounded-t-xl lg:px-6  lg:flex-[unset]"].join("")}
+            onClick={() => {
+              setTabActive("event");
+            }}
+          >
+            <div className="relative h-6 w-6 lg:h-9 lg:w-9">              
+              <IconCalendar className="w-[30px] h-[30px]" />
+            </div>
+            <span className="ml-3 lg:ml-4 inline">Event</span>
+          </button>
+
+        </div>
+      </div>
+
+      
+        {tabActive == "news" ? (
+          <section className="mb-20 bg-red-500">
+            <div className="grid lg:grid-cols-5 gap-10 items-center lg:px-20 md:px-10 px-5 pt-10">
+              <div className="h-[200px] md:h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
+                <img
+                  src="/images/header/3.jpg"
+                  alt=""
+                  className="object-cover h-full w-full"
+                  data-aos-once="true"
+                  data-aos="fade-left"
+                />
+              </div>
+              <div
+                className="lg:col-span-3"
+                data-aos-once="true"
+                data-aos="fade-right"
+              >
+                <h5 className="text-white font-semibold md:mb-5 mb-3 md:text-base text-sm">
+                  RAGAM BERITA
+                </h5>
+                <Link to="/news/read">
+                  <h2 className="font-bold md:text-3xl text-xl text-white ">
+                    {"INDONESIA DENGAN KEBERAGAMAN BUDAYA NUSANTARA YANG MENDUNIA"}
+                  </h2>
+                </Link>
+                <p className="mt-5 md:text-base text-[12px] text-white">
+                  {content.news.highlight.id}
+                </p>
+                <div className="flex gap-5 mt-10 text-slate-200 md:text-base text-sm">
+                  <span className="flex gap-2 items-center">
+                    <FaEye />
+                    <small>2.000 views</small>
+                  </span>
+                  <span className="flex gap-2 items-center">
+                    <FaHeart />
+                    <small>2.000 suka</small>
+                  </span>
+                  <span className="flex gap-2 items-center">
+                    <FaComment />
+                    <small>2.000 komentar</small>
+                  </span>
+                </div>
+
+                <div className="lg:flex hidden gap-5 md:justify-end justify-center mt-5">
+                  <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
+                    <FaChevronLeft />
+                  </button>
+                  <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
+                    <FaChevronRight />
+                  </button>
+                </div>
+              </div>
+            </div>
+            {moreNews ? (
+              <>
+                <section className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-10 md:px-20 px-5 mt-10">
+                  <div className="mt-5">
+                    <img
+                      src="/images/festivalbali.jpeg"
+                      alt="news1"
+                      className="h-[200px] sm:h-[250px] object-cover w-full rounded"
+                    />
+
+                    <Link to="/news/read">
+                      <h3 className="mt-3 text-xl font-bold text-white">
+                        {"Bali Arts Festival"}
+                      </h3>
+                    </Link>
+                    <div className="my-3 md:my-5 flex gap-5">
+                      <span className="flex gap-2 items-center text-white">
+                        <FaUser />
+                        <small>Rifki Romadhan</small>
+                      </span>
+                      <span className="flex gap-2 items-center text-white">
+                        <FaCalendar />
+                        <small>15 Mei 2024</small>
+                      </span>
+                    </div>
+                    <p className="text-white mt-2 text-sm">
+                      {content.news.sub.sub1.id}
+                    </p>
+                  </div>
+                 
+                  <div className="mt-5">
+                    <img
+                      src="/images/dalangcilik.jpg"
+                      alt="news2"
+                      className="h-[200px] sm:h-[250px] object-cover w-full rounded"
+                    />
+                    <Link to="/news/read">
+                      <h3 className="mt-3 text-xl font-bold text-white">
+                        {"Festival Dalang Cilik"}
+                      </h3>
+                    </Link>
+                    <div className="my-3 md:my-5 flex gap-5">
+                      <span className="flex gap-2 items-center text-white">
+                        <FaUser />
+                        <small>Rifki Romadhan</small>
+                      </span>
+                      <span className="flex gap-2 items-center text-white">
+                        <FaCalendar />
+                        <small>15 Mei 2024</small>
+                      </span>
+                    </div>
+                    <p className="text-white mt-2 text-sm">
+                      {content.news.sub.sub2.id}
+                    </p>
+                  </div>
+                 
+                  <div className="mt-5">
+                    <img
+                      src="/images/babarit.jpeg"
+                      alt="news3"
+                      className="h-[200px] sm:h-[250px] object-cover w-full rounded"
+                    />
+                    <Link to="/news/read">
+                      <h3 className="mt-3 text-xl font-bold text-white">
+                        {"Festival Babarit"}
+                      </h3>
+                    </Link>
+                    <div className="my-3 md:my-5 flex gap-5">
+                      <span className="flex gap-2 items-center text-white">
+                        <FaUser />
+                        <small>Rifki Romadhan</small>
+                      </span>
+                      <span className="flex gap-2 items-center text-white">
+                        <FaCalendar />
+                        <small>15 Mei 2024</small>
+                      </span>
+                    </div>
+                    <p className="text-white mt-2 text-sm">
+                      {content.news.sub.sub3.id}
+                    </p>
+                  </div>
+                </section>
+                <div className="flex flex-wrap justify-center text-center pb-10 ">
+                  <button
+                    className="w-full sm:w-[unset] mx-3 sm:mx-0 bg-white border-2 border-white hover:bg-slate-200 hover:border-red-400 text-red-500 text-sm sm:px-5 py-2 mt-10 rounded-full inline-flex items-center justify-center sm:gap-2 "
+                    onClick={() => {
+                      setMoreNews(false);
+                    }}
+                  >
+                    {"Lebih Sedikit"}
+                    <MdKeyboardDoubleArrowUp className="ml-5" />
+                  </button>
+                  <Link
+                    to={"/news"}
+                    className="w-full sm:w-[unset] mx-3 sm:mx-0 border-2 border-white hover:bg-white text-white hover:text-red-500 text-sm sm:px-5 py-2 mt-10 rounded-full inline-flex items-center sm:gap-2 justify-center md:ml-5"
+                  >
+                    {"Semua Berita"}
+                    <MdKeyboardDoubleArrowRight className="ml-5" />
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <div className="text-center pb-10 lg:block">
+                <button
+                  className="bg-white hover:bg-red-400 text-red-500 mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
+                  onClick={() => {
+                    setMoreNews(true);
+                  }}
+                >
+                  {"Lihat Lainnya"}
+                  <MdKeyboardDoubleArrowDown />
+                </button>
+              </div>
+            )}
+          </section>
+        ) : (
+          <section className="bg-red-500 py-10">
+            <div className="grid lg:grid-cols-5 gap-10 items-center lg:px-20 md:px-10 px-5 mt-10">
+              <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53251.56129429211!2d109.23964353647035!3d-7.246989405981301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff3ddf1ecc3e1%3A0x5027a76e35514b0!2sSerang%2C%20Karangreja%2C%20Purbalingga%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1727396738788!5m2!1sen!2sid"
+                  loading="lazy"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <div
+                className="lg:col-span-3"
+                data-aos-once="true"
+                data-aos="fade-right"
+              >
+                <h5 className="text-white font-semibold md:mb-5 mb-3 md:text-base text-sm">
+                  RAGAM EVENT
+                </h5>
+                <span>
+                  <h2 className="font-bold md:text-3xl text-white text-xl">
+                    FESTIVAL GUNUNG SLAMET
+                  </h2>
+                </span>
+                <p className="text-white mt-5 md:text-base text-[12px]">
+                  Acara ini akan menjadi salah satu festival budaya terbesar di Jawa Tengah, menghadirkan berbagai kegiatan seperti pentas seni, pameran kerajinan lokal, dan kuliner tradisional. Setiap pengunjung akan mendapatkan pengalaman unik dan mendalam tentang kebudayaan masyarakat sekitar Gunung Slamet. Ayo, jangan lewatkan kesempatan ini untuk merasakan kekayaan budaya Nusantara dan menjadi bagian dari sejarah!
+                </p>
+                <div className="flex gap-5 mt-10 text-slate-200 md:text-base text-sm">
+                  <span className="flex gap-2 items-center">
+                    <IconTicket />
+                    <small>Rp 5.000</small>
+                  </span>
+                  <span className="flex gap-2 items-center">
+                    <IconCalendar />
+                    <small>12-14 Juli Des 2024</small>
+                  </span>
+                  <span className="flex gap-2 items-center">
+                    <IconLocation />
+                    <small>Purbalingga</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="grid lg:grid-cols-5 gap-10 items-center lg:px-20 md:px-10 px-5 mt-10">
+              <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.304428534623!2d109.22997317532189!3d-7.431525492579166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655f1132540dff%3A0x4bc3543636f5849e!2sMenara%20Pandang%20Teratai!5e0!3m2!1sen!2sid!4v1727397014750!5m2!1sen!2sid"
+                  loading="lazy"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <div
+                className="lg:col-span-3"
+                data-aos-once="true"
+                data-aos="fade-right"
+              >
+                <h5 className="text-white font-semibold md:mb-5 mb-3 md:text-base text-sm">
+                  RAGAM EVENT
+                </h5>
+                <span>
+                  <h2 className="font-bold md:text-3xl text-white text-xl">
+                    KARYA KREATIVE SERAYU 2024
+                  </h2>
+                </span>
+                <p className="text-white mt-5 md:text-base text-[12px]">
+                  Karya Kreative Serayu 2024 akan menampilkan berbagai hasil karya kreatif dari seniman lokal dan nasional. Acara ini bertujuan untuk memperkenalkan seni dan budaya yang berkembang di sekitar wilayah Serayu, memberikan wadah bagi generasi muda untuk mengekspresikan kreativitas mereka. Jadilah bagian dari perayaan seni dan budaya ini, dengan berbagai kegiatan menarik seperti pameran seni, workshop, dan pertunjukan musik yang akan memanjakan para pengunjung.
+                </p>
+                <div className="flex gap-5 mt-10 text-slate-200 md:text-base text-sm">
+                  <span className="flex gap-2 items-center">
+                    <IconTicket />
+                    <small>Gratis</small>
+                  </span>
+                  <span className="flex gap-2 items-center">
+                    <IconCalendar />
+                    <small>20-21 Juli 2024</small>
+                  </span>
+                  <span className="flex gap-2 items-center">
+                    <IconLocation />
+                    <small>Kompleks Menara Pandang Teratai Purwokerto</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+
+      <div className="mx-auto my-12 max-w-[1350px] space-y-16 px-4">
+        <div className="py-8">
+          <div>
+            <h2 className="text-red-500 text-center text-3xl font-bold">Apa Kata Nusantarawan Tentang Warisan Nusantara?</h2>
+            <p className="text-mono-800 mx-auto mt-4 text-center lg:max-w-[50%]">Total 
+              <span className="text-mono-1000 font-semibold"> 136K+ Cendekiawan Digital Nusantara</span>, Simak keseruan dan manfaat yang dirasakan para Cendekiawan Nusantara. Apakah kamu yang selanjutnya mewarisi semangat dan inovasi budaya kita?
             </p>
-            <div className="flex gap-5 mt-10 text-gray-600 dark:text-gray-400 md:text-base text-sm">
-              <span className="flex gap-2 items-center">
-                <FaEye />
-                <small>2.000 views</small>
-              </span>
-              <span className="flex gap-2 items-center">
-                <FaHeart />
-                <small>2.000 suka</small>
-              </span>
-              <span className="flex gap-2 items-center">
-                <FaComment />
-                <small>2.000 komentar</small>
-              </span>
+          </div>
+          <div className="no-scrollbar mt-8 flex snap-x snap-mandatory flex-col px-5 sm:flex-row items-stretch lg:justify-between gap-8  scroll-smooth max-lg:-mx-4 md:flex-wrap justify-center">
+
+            <div className="flex w-[100%] md:w-[calc(100%/2-theme(spacing.6))] flex-shrink-0 snap-start flex-col gap-6 lg:w-[calc(100%/3-theme(spacing.6))]">
+              <div className="flex-1 space-y-6">
+                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B]"/>
+                <p className="text-base md:text-lg font-medium text-[#1F2021]">Warisan Nusantara merupakan langkah maju dalam upaya global melestarikan warisan budaya. Platform ini menggabungkan kekuatan teknologi dan tradisi, menciptakan ruang yang memungkinkan warisan leluhur kita tetap hidup di era digital.</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src="/images/people/Irina_Bokova_UNESCO.jpg" className="h-12 w-12 rounded-full object-cover"/>
+                <div>
+                  <h4 className="text-lg font-semibold">Irina Bokova</h4>
+                  <p className="">Mantan Direktur Jenderal UNESCO</p>
+                </div>
+              </div>
             </div>
 
-            <div className="lg:flex hidden gap-5 md:justify-end justify-center mt-5">
-              <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
-                <FaChevronLeft />
-              </button>
-              <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
-                <FaChevronRight />
-              </button>
+            <div className="flex w-[100%] md:w-[calc(100%/2-theme(spacing.6))] flex-shrink-0 snap-start flex-col gap-6 lg:w-[calc(100%/3-theme(spacing.6))]">
+              <div className="flex-1 space-y-6">
+                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B]"/>
+                <p className="text-base md:text-lg font-medium text-[#1F2021]">Warisan Nusantara memungkinkan saya untuk memahami lebih dalam tentang warisan leluhur. Melalui program ini, saya bisa mengaplikasikan keterampilan digital sambil tetap menghargai dan menjaga kekayaan budaya kita.</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src="/images/people/img1.jpg" className="h-12 w-12 rounded-full object-cover"/>
+                <div>
+                  <h4 className="text-mono-1000 text-lg font-semibold">Dewi Lestari</h4>
+                  <p className="text-mono-700 text-center">Cultural Researcher</p>
+                </div>
+              </div>
+            </div>
+          
+            <div className="flex w-[100%] md:w-[calc(100%/2-theme(spacing.6))] flex-shrink-0 snap-start flex-col gap-6 lg:w-[calc(100%/3-theme(spacing.6))]">
+              <div className="flex-1 space-y-6">
+                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B]"/>
+                <p className="text-base md:text-lg font-medium text-[#1F2021]">Sebagai seseorang yang mencintai sejarah dan teknologi, Warisan Nusantara memberi saya kesempatan untuk menjembatani keduanya. Ini bukan hanya platform budaya, tetapi juga tempat inovasi untuk generasi masa depan.</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src="/images/people/img2.jpg" className="h-12 w-12 rounded-full object-cover"/>
+                <div>
+                  <h4 className="text-mono-1000 text-lg font-semibold">Rina Santoso</h4>
+                  <p className="text-mono-700 text-center">Content Creator</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        {moreNews ? (
-          <>
-            <section className="lg:grid hidden grid-cols-3 gap-10 px-20 mt-10">
-              <div>
-                <img
-                  src="/images/festivalbali.jpeg"
-                  alt="news1"
-                  className="h-[250px] object-cover w-full rounded"
-                />
-
-                <Link to="/news/read">
-                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                    {"Bali Arts Festival"}
-                  </h3>
-                </Link>
-                <div className="my-5 flex gap-5">
-                  <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-                    <FaUser />
-                    <small>Rifki Romadhan</small>
-                  </span>
-                  <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-                    <FaCalendar />
-                    <small>15 Mei 2024</small>
-                  </span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  {content.news.sub.sub1.id}
-                </p>
+      
+        <div>
+          <div className="bg-red-500 flex flex-col overflow-hidden rounded-xl lg:h-80 lg:flex-row">
+            <div className="flex-1 self-center p-8 px-6 text-center lg:px-8 lg:text-left">
+              <h2 className="text-3xl font-bold text-white">Tertarik untuk Berkolaborasi &amp; Memberi Dampak Positif?</h2>
+              <p className="text-white mt-4">Lebih dari <span className="font-bold">100+ perusahaan</span> telah bekerja sama dengan Warisan Nusantara untuk melestarikan dan memajukan kekayaan budaya Indonesia.</p>
+              
+              <div className="mt-8 flex flex-col items-center gap-6 lg:flex-row">
+                <a href="wa.me/+6282133320489" className="flex items-center justify-center font-medium disabled:opacity-80 gap-2 h-12 min-w-[theme(spacing.36)] px-5 rounded-lg disabled:bg-white disabled:text-white-600 disabled:cursor-not-allowed text-red-500 bg-white hover:bg-white-200 w-full lg:w-fit outline outline-1 outline-white" type="button">Gabung Jadi Partner</a>
+                <a href="/partner" className="flex items-center justify-center font-medium disabled:opacity-80 gap-2 h-12 min-w-[theme(spacing.36)] px-5 rounded-lg disabled:bg-white disabled:text-white disabled:cursor-not-allowed bg-red-500 outline outline-1 outline-white hover:bg-red-600 text-white w-full lg:w-fit" type="button">Pelajari Lebih Lanjut <i className="fi fi-sr-arrow-right text-white-50 h-4 w-4"></i></a>
               </div>
-              <div>
-                <img
-                  src="/images/dalangcilik.jpg"
-                  alt="news2"
-                  className="h-[250px] object-cover w-full rounded"
-                />
-                <Link to="/news/read">
-                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                    {"Festival Dalang Cilik"}
-                  </h3>
-                </Link>
-                <div className="my-5 flex gap-5">
-                  <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-                    <FaUser />
-                    <small>Rifki Romadhan</small>
-                  </span>
-                  <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-                    <FaCalendar />
-                    <small>15 Mei 2024</small>
-                  </span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  {content.news.sub.sub2.id}
-                </p>
-              </div>
-              <div>
-                <img
-                  src="/images/babarit.jpeg"
-                  alt="news3"
-                  className="h-[250px] object-cover w-full rounded"
-                />
-                <Link to="/news/read">
-                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                    {"Festival Babarit"}
-                  </h3>
-                </Link>
-                <div className="my-5 flex gap-5">
-                  <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-                    <FaUser />
-                    <small>Rifki Romadhan</small>
-                  </span>
-                  <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-                    <FaCalendar />
-                    <small>15 Mei 2024</small>
-                  </span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  {content.news.sub.sub3.id}
-                </p>
-              </div>
-            </section>
-            <div className="lg:block hidden text-center ">
-              <button
-                className="bg-red-500 border-2 border-red-500 hover:bg-red-400 hover:border-red-400 text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2 mr-5"
-                onClick={() => {
-                  setMoreNews(false);
-                }}
-              >
-                {"Lebih Sedikit"}
-                <MdKeyboardDoubleArrowUp />
-              </button>
-              <Link
-                to={"/news"}
-                className="border-2 border-red-500 hover:bg-red-500 text-red-500 hover:text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
-              >
-                {"Semua Berita"}
-                <MdKeyboardDoubleArrowRight />
-              </Link>
             </div>
-          </>
-        ) : (
-          <div className="text-center lg:block hidden">
-            <button
-              className="bg-red-500 hover:bg-red-400 text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
-              onClick={() => {
-                setMoreNews(true);
-              }}
-            >
-              {"Lihat Lainnya"}
-              <MdKeyboardDoubleArrowDown />
-            </button>
+            
+            <div className="relative flex max-h-60 w-full flex-1 items-start gap-3 overflow-hidden px-4 lg:max-h-[unset] lg:gap-4 lg:px-8">
+              <div className="animate-marquee-vertical flex-1 [animation-duration:30s] lg:[animation-duration:50s]">
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/1.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/2.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/3.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/4.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/5.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/6.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/1.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/2.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/3.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/4.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/5.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/6.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+              </div>
+              
+              <div className="animate-marquee-down-vertical flex-1 self-end [animation-duration:30s] lg:[animation-duration:50s]">
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/7.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/8.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/9.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/10.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/11.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/7.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/8.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/9.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/10.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/11.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+              </div>
+              
+              <div className="animate-marquee-vertical flex-1 [animation-duration:30s] lg:[animation-duration:50s]">
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/12.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/13.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/14.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/15.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/16.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/17.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/12.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/13.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/14.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/15.png" className="pointer-events-none h-full w-full select-none object-contain" />
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/16.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+                
+                <div className="mt-3 h-16 w-full rounded-lg bg-white p-3 lg:mt-4 lg:h-20">
+                  <img src="/images/partners/17.png" className="pointer-events-none h-full w-full select-none object-contain"/>
+                </div>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
+      </div>
+
+      
+      <section id="contact">
+        <div className="my-14 flex flex-row justify-center flex-wrap lg:flex-nowrap">
+          <div
+              className="w-full lg:w-[30%] 2xl:w-[40%] px-5 lg:px-0 py-10 lg:pl-20 bg-[#0f172a] dark:bg-blue-600 lg:rounded-tr-xl lg:rounded-br-xl lg:mr-3">
+                <h2 className="font-bold text-3xl mb-3 lg:text-4xl text-white">Kontak</h2>
+                <div className="w-40 h-1 lg:h-2 rounded-full mb-5 lg:mb-10 bg-red-500"></div>
+                <p className="text-base text-white lg:text-lg">
+                    Ada pertanyaan atau komentar? Tuliskan saja pesan untuk kami
+                </p>
+          </div>
+
+          <div className="w-full lg:w-[70%] pl-5 pr-10 lg:pl-0 lg:px-0 lg:pr-20">
+              
+            <form action="" className="mt-10 lg:mt-0 ">
+                <label htmlFor="name" className="w-full text-red-500 font-semibold">Nama</label>
+                <input type="text" id="name"
+                    className="w-full rounded-lg border-2 p-3 focus:outline-none focus:outline-secondary my-3 bg-slate-200 text-dark"
+                    placeholder="Masukkan nama anda..."/>
+
+                <label htmlFor="email" className="w-full text-red-500 font-semibold">Email</label>
+                <input type="email" id="email"
+                    className="w-full rounded-lg border-2 p-3 focus:outline-none focus:outline-secondary my-3 bg-slate-200 text-dark"
+                    placeholder="Masukkan email anda..."/>
+
+                <label htmlFor="message" className="w-full text-red-500 font-semibold">Pesan</label>
+                <textarea id="message" rows={5}
+                    className="w-full rounded-lg border-2 p-3 focus:outline-none focus:outline-secondary my-3 bg-slate-200 text-dark"
+                    placeholder="Masukkan pesan anda..."></textarea>
+
+                <button
+                    className="px-10 py-3 bg-red-500 rounded-lg shadow-md text-white font-semibold">Kirim</button>
+
+            </form>
+
+          </div>
+        </div>
       </section>
     </>
   );

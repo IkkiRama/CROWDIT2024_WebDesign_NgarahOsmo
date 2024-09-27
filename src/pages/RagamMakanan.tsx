@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // icons
 import { FaBowlFood } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import DarkNavbar from "../layouts/darkNavbar";
 
 import foods from "./../data/foods.json";
 import { FaSearch } from "react-icons/fa";
@@ -31,14 +32,9 @@ export default function RagamMakanan() {
 
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <main className="lg:px-20 md:px-10 px-5 dark:bg-black">
+      <DarkNavbar />
+
+      <main className="mt-44 lg:px-20 md:px-10 px-5 dark:bg-black">
         <h1 className="md:flex gap-3 text-center justify-center items-center font-bold md:text-3xl text-2xl dark:text-gray-200">
           <span className="bg-orange-500 w-[50px] h-[50px] flex items-center justify-center text-white rounded-full md:mx-0 mx-auto">
             <FaBowlFood size={30} />
@@ -105,7 +101,7 @@ export default function RagamMakanan() {
         </section>
       </main>
 
-      <div className="flex gap-1 justify-center mt-10">
+      <div className="flex gap-1 justify-center mt-10 mb-16">
         <a
           href="#"
           className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-orange-400 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-orange-400"
@@ -156,39 +152,7 @@ export default function RagamMakanan() {
         </a>
       </div>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <section className="lg:px-20 md:px-10 px-3 md:py-14 py-10 lg:flex lg:justify-between lg:items-center bg-gradient-to-r from-red-500/90 to-red-400/90 text-white relative overflow-hidden">
-        <span
-          id="blink"
-          className="w-[1000px] h-[1000px] rounded-full absolute -rotate-[60deg]"
-          style={{
-            backgroundImage:
-              "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
-          }}
-        ></span>
-
-        <div className="relative z-10">
-          <h3 className="font-bold md:text-2xl text-xl lg:text-left text-center">
-            LOGIN UNTUK MENDAPATKAN NOTIFIKASI BERITA BARU
-          </h3>
-          <p className="text-gray-200 mt-2 md:md:text-base text-[13px] text-sm md:mb-0 mb-10 lg:text-left text-center">
-            Setiap ada berita, event serta konten baru akan diberitahu lewat
-            email
-          </p>
-        </div>
-        <div className="relative z-10 lg:mt-0 mt-10 flex justify-center">
-          <Link
-            to={"/subscription"}
-            className="bg-white md:px-7 px-5 md:py-3 py-2 md:text-base text-sm border-2 border-white rounded-full text-red-500 font-semibold hover:bg-transparent hover:text-white"
-          >
-            Subscription
-          </Link>
-        </div>
-      </section>
+      
     </>
   );
 }

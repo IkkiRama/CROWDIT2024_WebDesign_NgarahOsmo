@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
-
 import Switcher from "./../components/swicher";
 // icons
 import { FaBars, FaBell, FaGlobe, FaHome, FaNewspaper } from "react-icons/fa";
 import { FaMapLocation } from "react-icons/fa6";
 
 const DarkNavbar = () => {
+  const location = useLocation();
+
   const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
   ))(({ theme }) => ({
@@ -34,9 +34,6 @@ const DarkNavbar = () => {
   useEffect(() => {
     const nav = document.querySelector("nav") as HTMLElement;
     const modeToggle = document.querySelector("#changeMode") as HTMLElement;
-    // const changeLanguage = document.querySelector(
-    //   "#changeLanguage"
-    // ) as HTMLElement;
     const h2Nav = document.querySelector("nav section div h2") as HTMLElement;
 
     const handleScroll = () => {
@@ -48,39 +45,66 @@ const DarkNavbar = () => {
       if (!navOpen) {
         nav.classList.toggle("!bg-black", window.scrollY > 200);
         nav.classList.toggle("!text-white", window.scrollY > 200);
-        //
-        modeToggle.classList.toggle("bg-white", window.scrollY < 200);
-        modeToggle.classList.toggle("!text-white", window.scrollY > 200);
-        //
-        // changeLanguage.classList.toggle("bg-white", window.scrollY < 200);
-        // changeLanguage.classList.toggle("!text-white", window.scrollY > 200);
-
         h2Nav.classList.toggle("!text-white", window.scrollY > 200);
       }
     };
 
-    // Attach the event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const getLinkClass = (path: string) =>
+    location.pathname === path
+      ? "text-red-500 relative font-semibold after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[70%] after:h-[3px] after:bg-red-500 after:rounded-full gap-8 "
+      : "text-white ";
+
   return (
     <>
       <nav className="fixed left-0 right-0 bg-black z-50 lg:text-black text-white lg:py-7 md:py-6 py-5 lg:px-24 md:px-12 px-5 transition-all duration-500">
         <section className="flex justify-between">
-          <div className="w-1/2">
+          <div className="w-3/4 lg:w-1/4">
             <h2
-              className="font-bold md:text-2xl text-xl font-dancing-script w-full text-gray-200"
-              style={{ fontFamily: "Dancing Script, cursive !important" }}
+              className="text-white font-semibold md:text-xl text-base"
             >
               <Link to={"/"}>Warisan Nusantara</Link>
             </h2>
           </div>
-          <div className="md:flex hidden gap-10 items-center justify-end w-1/4">
+          <div className="lg:flex gap-10 hidden items-center justify-end w-1/4 lg:w-1/2 ">
+            <div className="text-right text-white flex">
+              <Link
+                to="/"
+              >
+                <span className={[getLinkClass("/"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
+                  Beranda
+                </span>
+              </Link>
+              <Link
+                to="/event"
+              >
+                <span className={[getLinkClass("/event"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
+                  Event
+                </span>
+              </Link>
+              
+              <Link
+                to="/ragam-indonesia"
+              >
+                <span className={[getLinkClass("/ragam-indonesia"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
+                  Ragam Indonesia
+                </span>
+              </Link>
+              <Link
+                to="/news"
+              >
+                <span className={[getLinkClass("/news"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
+                  Berita
+                </span>
+              </Link>
+            </div>
+
             <BootstrapTooltip
               title={"Ganti Mode"}
               placement="bottom"
@@ -88,23 +112,15 @@ const DarkNavbar = () => {
             >
               <span
                 id="changeMode"
-                className="!bg-gray-900 !text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                className="text-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
               >
                 <Switcher />
               </span>
             </BootstrapTooltip>
 
-            <div className="w-1/4 text-right text-white">
-              <button
-                onClick={() => {
-                  toggleNavigation();
-                }}
-              >
-                <FaBars />
-              </button>
-            </div>
+            
           </div>
-          <div className="md:hidden flex gap-10 items-center justify-end w-1/4">
+          <div className="lg:hidden flex gap-10 items-center justify-end w-1/4">
             <div className="w-1/4 text-right text-white">
               <button
                 onClick={() => {
@@ -118,60 +134,16 @@ const DarkNavbar = () => {
         </section>
         <section id="navigation" className="hidden md:gap-20 gap-12">
           <hr className="my-5 border-gray-800" />
-          <div className="flex overflow-x-auto">
+          <div className="flex overflow-x-auto ">
             <Link
               to="/"
               onClick={() => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className={[getLinkClass("/"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
                 <FaHome className="md:inline-block hidden" />
                 Beranda
-              </span>
-            </Link>
-            <Link
-              to="/news"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
-                <FaNewspaper className="md:inline-block hidden" />
-                Berita
-              </span>
-            </Link>
-            <Link
-              to="/ragam-indonesia"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
-                <FaGlobe className="md:inline-block hidden" />
-                Ragam
-              </span>
-            </Link>
-            <Link
-              to="/map"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
-                <FaMapLocation className="md:inline-block hidden" />
-                Peta Interaktif
-              </span>
-            </Link>
-            <Link
-              to="/subscription"
-              onClick={() => {
-                toggleNavigation();
-              }}
-            >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
-                <FaBell className="md:inline-block hidden" />
-                Subscription
               </span>
             </Link>
             <Link
@@ -180,9 +152,31 @@ const DarkNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+              <span className={[getLinkClass("/event"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
                 <FaBell className="md:inline-block hidden" />
                 Event
+              </span>
+            </Link>
+            <Link
+              to="/ragam-indonesia"
+              onClick={() => {
+                toggleNavigation();
+              }}
+            >
+              <span className={[getLinkClass("/ragam-indonesia"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
+                <FaGlobe className="md:inline-block hidden" />
+                Ragam Indonesia
+              </span>
+            </Link>
+            <Link
+              to="/news"
+              onClick={() => {
+                toggleNavigation();
+              }}
+            >
+              <span className={[getLinkClass("/news"), "lg:text-[14px] text-[12px] cursor-pointer flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3"].join("")}>
+                <FaNewspaper className="md:inline-block hidden" />
+                Berita
               </span>
             </Link>
           </div>

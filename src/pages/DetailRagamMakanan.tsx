@@ -187,34 +187,7 @@ export default function DetailRagamMakanan(language: any) {
       <br />
       <br />
       <br />
-      <section className="lg:px-20 md:px-10 px-3 md:py-14 py-10 lg:flex lg:justify-between lg:items-center bg-gradient-to-r from-red-500/90 to-red-400/90 text-white relative overflow-hidden">
-        <span
-          id="blink"
-          className="w-[1000px] h-[1000px] rounded-full absolute -rotate-[60deg]"
-          style={{
-            backgroundImage:
-              "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(255, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
-          }}
-        ></span>
-
-        <div className="relative z-10">
-          <h3 className="font-bold md:text-2xl text-xl lg:text-left text-center">
-            LOGIN UNTUK MENDAPATKAN NOTIFIKASI BERITA BARU
-          </h3>
-          <p className="text-gray-200 mt-2 md:md:text-base text-[13px] text-sm md:mb-0 mb-10 lg:text-left text-center">
-            Setiap ada berita, event serta konten baru akan diberitahu lewat
-            email
-          </p>
-        </div>
-        <div className="relative z-10 lg:mt-0 mt-10 flex justify-center">
-          <Link
-            to={"/subscription"}
-            className="bg-white md:px-7 px-5 md:py-3 py-2 md:text-base text-sm border-2 border-white rounded-full text-red-500 font-semibold hover:bg-transparent hover:text-white"
-          >
-            Subscription
-          </Link>
-        </div>
-      </section>
+      
     </>
   );
 }

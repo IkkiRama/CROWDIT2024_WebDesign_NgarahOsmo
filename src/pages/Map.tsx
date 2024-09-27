@@ -29,6 +29,11 @@ export default function Map() {
 
       <br />
       <GoogleMapComponent />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }

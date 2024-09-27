@@ -1,170 +1,159 @@
+
+import { Link } from "react-router-dom";
+
 export default function Footer() {
+
   return (
-    <footer className="bg-black text-white">
-      <section className="container lg:px-20 md:px-10 px-5 py-12 mx-auto">
-        <div className="lg:flex">
-          <div className="min-w-[300px]">
-            <h3 className="md:text-3xl text-2xl font-bold mb-20 md:text-left text-center font-dancing-script">
-              Warisan Nusantara
-            </h3>
-          </div>
-          <div className="w-full">
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-20">
-              <div className="border-t-4 border-red-500">
-                <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Informasi Lainnya
-                </h4>
-                <ul className="text-sm">
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Tentang Kami
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Hubungi Kami
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Peraturan dan Ketentuan
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t-4 border-indigo-500">
-                <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Ikuti Kami
-                </h4>
-                <ul className="text-sm">
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Instagram
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Facebook
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Youtube
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Twitter
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Tiktok
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t-4 border-emerald-500">
-                <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Ragam Indonesia
-                </h4>
-                <ul className="text-sm">
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Lagu & Musik
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Arsitektur Bangunan
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Makanan Khas
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Seni Tari
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t-4 border-yellow-500">
-                <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Berita Budaya
-                </h4>
-                <ul className="text-sm">
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Indonesia Dimata Dunia
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Bahasa Indonesia Mendunia
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Tari Budaya di Turki
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t-4 border-purple-500">
-                <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Subscription
-                </h4>
-                <ul className="text-sm">
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Lewat Email
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Lewat Instagram
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Lewat Facebook
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t-4 border-orange-500">
-                <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  FAQ
-                </h4>
-                <ul className="text-sm">
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Bagaimana Cara Subscription?
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Apa Keuntungan Subcription?
-                    </a>
-                  </li>
-                  <li className="mb-2 text-gray-300">
-                    <a href="#" className="md:text-base text-[12px]">
-                      Apakah Subscription Berbayar?
-                    </a>
-                  </li>
-                </ul>
-              </div>
+    <footer id="clients" className="bg-red-500 lg:rounded-tl-[100px]">
+      {/* client */}
+      <div className="py-10 lg:px-[55px] lg:py-20 px-3">
+        <div className="flex flex-wrap lg:mb-20 lg:flex-nowrap">
+            <h2 className="font-bold text-white text-3xl lg:text-4xl mb-3 lg:mr-20 ">MediaPartner</h2>
+            <p className=" text-white mb-10 lg:mb-0 max-w-[630px] lg:text-xl text-[15px]">
+                Media partner yang mendukung dan turut berkontribusi dalam memperluas jangkauan serta apresiasi terhadap karya-karya yang kami ciptakan.
+            </p>
+        </div>
+
+        {/* imgClient */}
+        <div className="overflow-hidden w-[100%]">
+          <div className="animate-marquee flex justify-evenly gap-x-8 [animation-duration:20s] lg:[animation-duration:40s]">
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/1.png" alt="client"/>
             </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/2.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/3.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/4.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/5.png" alt="client"/>
+            </div>
+                        
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/6.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/7.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/8.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/9.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/10.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/1.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/2.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/3.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/4.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/5.png" alt="client"/>
+            </div>
+            
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/6.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/7.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/8.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/9.png" alt="client"/>
+            </div>
+
+            <div className="relative h-12 lg:h-24 w-[calc(100%/4)] flex-shrink-0 select-none md:w-[calc(100%/6)] lg:w-[calc(100%/8)] bg-white rounded-lg p-2">
+              <img className="pointer-events-none h-full w-full select-none object-contain" src="/images/medpart/10.png" alt="client"/>
+            </div>
+
           </div>
+
         </div>
-        <div className="col-span-3 text-center">
-          <hr className="mb-3 my-14 border-gray-600" />
-          <p className="md:text-base text-sm">&copy; 2024 Ngarah Osmo</p>
+      </div>
+
+      <div className="w-full mt-5 pt-7 md:pt-16 bg-dark  lg:w-[90%] lg:rounded-tr-[100px]">
+        {/* footer */}
+        <div className="flex flex-wrap px-3 lg:pl-10">
+            <div className="mt-10 w-full lg:w-1/3">
+                <h2 className="text-white lg:mb-11 font-bold text-2xl mb-5 md:text-3xl">Hubungi kami</h2>
+                <p className="text-white mb-2 md:text-lg mb:mb-4">No Wa : 082133320489</p>
+                <p className="text-white mb-2 md:text-lg mb:mb-4">Email : georgeikkirama@gmail.com</p>
+                <p className="text-white mb-2 md:text-lg mb:mb-4">Alamat : Jl. Raya Dagan RT 03 RW 09</p>
+            </div>
+
+            <div className="mt-10 w-full sm:w-1/2 lg:w-1/3">
+                <h2 className="text-white lg:mb-11 font-bold text-2xl mb-5 md:text-3xl">Tautan</h2>
+                <div className="flex flex-wrap">
+                    <a href="/"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Beranda</a>
+                    <a href="/news"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Event</a>
+                    <a href="#experience" className="text-white mb-4 w-full hover:text-blue-600 hover:underline
+                        md:text-lg">Berita</a>
+                    <a href="/subscription"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Subscription</a>
+                    <a href="/map"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Peta Interaktif</a>
+                    <a href="/ragam-indonesia"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Ragam Indonesia</a>
+                </div>
+            </div>
+
+            <div className="my-10 w-full sm:w-1/2 lg:w-1/3">
+                <h2 className="text-white lg:mb-11 font-bold text-2xl mb-5 md:text-3xl">Social Media</h2>
+                <div className="flex flex-wrap">
+                    <a href="https://wa.link/iiqcmb"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">WhatsApp</a>
+                    <a href="https://github.com/IkkiRama"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">GitHub</a>
+                    <a href="https://www.instagram.com/george_ikki/"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Instagram</a>
+                    <a href="https://www.youtube.com/channel/UCDYgvHIUtwRDRfS4srHFQDg"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Youtube</a>
+                    <a href="https://www.linkedin.com/in/rifki-romadhan-purbalingga/"
+                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">LinkedIn</a>
+                </div>
+            </div>
+
+            <footer
+                className="text-white w-full text-center text-xs font-medium lg:text-lg py-5 lg:py-7 lg:mt-20">
+                Dibuat dengan ❤️ oleh <a href="https://www.linkedin.com/in/rifki-romadhan"
+                    className="hover:underline text-primary">Ngarah Osmo</a>. Hak cipta © 2024
+            </footer>
+
         </div>
-      </section>
+      </div>
     </footer>
   );
 }
