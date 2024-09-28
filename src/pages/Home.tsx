@@ -104,7 +104,7 @@ const Home = () => {
               { img: "/images/header/subheader2_thumb.jpg", delay: 900 },
               { img: "/images/header/subheader1_thumb.jpg", delay: 600 },
               { img: "/images/header/subheader3_thumb.jpg", delay: 300 },
-              { img: "/images/header/subheader1_thumb.jpg", delay: 200 },
+              { img: "/images/header/subheader4_thumb.jpg", delay: 200 },
             ].map((thumb, idx) => (
               <div
                 key={idx}
@@ -127,6 +127,7 @@ const Home = () => {
                 { src: "/images/header/subheader1.jpg" },
                 { src: "/images/header/subheader2.jpg" },
                 { src: "/images/header/subheader3.jpg" },
+                { src: "/images/header/subheader4.jpg" },
               ]}
             />
           </div>
