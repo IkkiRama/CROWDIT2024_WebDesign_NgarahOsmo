@@ -99,11 +99,12 @@ const Home = () => {
           </div>
 
           {/* Thumbnails Grid */}
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3 sm:order-2 order-1">
+          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-2 lg:gap-5 gap-3 sm:order-2 order-1">
             {[
               { img: "/images/header/subheader2_thumb.jpg", delay: 900 },
               { img: "/images/header/subheader1_thumb.jpg", delay: 600 },
               { img: "/images/header/subheader3_thumb.jpg", delay: 300 },
+              { img: "/images/header/subheader1_thumb.jpg", delay: 200 },
             ].map((thumb, idx) => (
               <div
                 key={idx}
@@ -115,7 +116,7 @@ const Home = () => {
                 <img
                   src={thumb.img}
                   alt={`subheader${idx + 1}`}
-                  className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
+                  className="lg:w-[120px] w-full lg:h-[120px] h-[100%] rounded-md object-cover"
                 />
               </div>
             ))}
@@ -690,10 +691,10 @@ const Home = () => {
                 </div>
 
                 <div className="lg:flex hidden gap-5 md:justify-end justify-center mt-5">
-                  <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
+                  <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] text-red-500 bg-white hover:bg-slate-200 ">
                     <FaChevronLeft />
                   </button>
-                  <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
+                  <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] text-red-500 bg-white hover:bg-slate-200 ">
                     <FaChevronRight />
                   </button>
                 </div>
@@ -821,7 +822,7 @@ const Home = () => {
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53251.56129429211!2d109.23964353647035!3d-7.246989405981301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff3ddf1ecc3e1%3A0x5027a76e35514b0!2sSerang%2C%20Karangreja%2C%20Purbalingga%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1727396738788!5m2!1sen!2sid"
                   loading="lazy"
-                  className="w-full h-full"
+                  className="bg-gray-300 w-full h-full"
                 ></iframe>
               </div>
               <div
@@ -861,7 +862,7 @@ const Home = () => {
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.304428534623!2d109.22997317532189!3d-7.431525492579166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655f1132540dff%3A0x4bc3543636f5849e!2sMenara%20Pandang%20Teratai!5e0!3m2!1sen!2sid!4v1727397014750!5m2!1sen!2sid"
                   loading="lazy"
-                  className="w-full h-full"
+                  className="bg-gray-300 w-full h-full"
                 ></iframe>
               </div>
               <div
@@ -904,50 +905,50 @@ const Home = () => {
         <div className="py-8">
           <div>
             <h2 className="text-red-500 text-center text-3xl font-bold">Apa Kata Nusantarawan Tentang Warisan Nusantara?</h2>
-            <p className="text-mono-800 mx-auto mt-4 text-center lg:max-w-[50%]">Total 
-              <span className="text-mono-1000 font-semibold"> 136K+ Cendekiawan Digital Nusantara</span>, Simak keseruan dan manfaat yang dirasakan para Cendekiawan Nusantara. Apakah kamu yang selanjutnya mewarisi semangat dan inovasi budaya kita?
+            <p className="mx-auto mt-4 text-center lg:max-w-[50%] dark:text-white">Total 
+              <span className="font-semibold "> 136K+ Cendekiawan Digital Nusantara</span>, Simak keseruan dan manfaat yang dirasakan para Cendekiawan Nusantara. Apakah kamu yang selanjutnya mewarisi semangat dan inovasi budaya kita?
             </p>
           </div>
           <div className="no-scrollbar mt-8 flex snap-x snap-mandatory flex-col px-5 sm:flex-row items-stretch lg:justify-between gap-8  scroll-smooth max-lg:-mx-4 md:flex-wrap justify-center">
 
             <div className="flex w-[100%] md:w-[calc(100%/2-theme(spacing.6))] flex-shrink-0 snap-start flex-col gap-6 lg:w-[calc(100%/3-theme(spacing.6))]">
               <div className="flex-1 space-y-6">
-                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B]"/>
-                <p className="text-base md:text-lg font-medium text-[#1F2021]">Warisan Nusantara merupakan langkah maju dalam upaya global melestarikan warisan budaya. Platform ini menggabungkan kekuatan teknologi dan tradisi, menciptakan ruang yang memungkinkan warisan leluhur kita tetap hidup di era digital.</p>
+                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B] dark:text-white"/>
+                <p className="text-base md:text-lg font-medium text-[#1F2021] dark:text-white">Warisan Nusantara merupakan langkah maju dalam upaya global melestarikan warisan budaya. Platform ini menggabungkan kekuatan teknologi dan tradisi, menciptakan ruang yang memungkinkan warisan leluhur kita tetap hidup di era digital.</p>
               </div>
               <div className="flex items-center gap-4">
                 <img src="/images/people/Irina_Bokova_UNESCO.jpg" className="h-12 w-12 rounded-full object-cover"/>
                 <div>
-                  <h4 className="text-lg font-semibold">Irina Bokova</h4>
-                  <p className="">Mantan Direktur Jenderal UNESCO</p>
+                  <h4 className="text-lg font-semibold dark:text-white">Irina Bokova</h4>
+                  <p className="dark:text-white">Mantan Direktur Jenderal UNESCO</p>
                 </div>
               </div>
             </div>
 
             <div className="flex w-[100%] md:w-[calc(100%/2-theme(spacing.6))] flex-shrink-0 snap-start flex-col gap-6 lg:w-[calc(100%/3-theme(spacing.6))]">
               <div className="flex-1 space-y-6">
-                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B]"/>
-                <p className="text-base md:text-lg font-medium text-[#1F2021]">Warisan Nusantara memungkinkan saya untuk memahami lebih dalam tentang warisan leluhur. Melalui program ini, saya bisa mengaplikasikan keterampilan digital sambil tetap menghargai dan menjaga kekayaan budaya kita.</p>
+                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B] dark:text-white"/>
+                <p className="text-base md:text-lg font-medium text-[#1F2021] dark:text-white">Warisan Nusantara memungkinkan saya untuk memahami lebih dalam tentang warisan leluhur. Melalui program ini, saya bisa mengaplikasikan keterampilan digital sambil tetap menghargai dan menjaga kekayaan budaya kita.</p>
               </div>
               <div className="flex items-center gap-4">
                 <img src="/images/people/img1.jpg" className="h-12 w-12 rounded-full object-cover"/>
                 <div>
-                  <h4 className="text-mono-1000 text-lg font-semibold">Dewi Lestari</h4>
-                  <p className="text-mono-700 text-center">Cultural Researcher</p>
+                  <h4 className="text-lg font-semibold dark:text-white">Dewi Lestari</h4>
+                  <p className="dark:text-white">Cultural Researcher</p>
                 </div>
               </div>
             </div>
           
             <div className="flex w-[100%] md:w-[calc(100%/2-theme(spacing.6))] flex-shrink-0 snap-start flex-col gap-6 lg:w-[calc(100%/3-theme(spacing.6))]">
               <div className="flex-1 space-y-6">
-                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B]"/>
-                <p className="text-base md:text-lg font-medium text-[#1F2021]">Sebagai seseorang yang mencintai sejarah dan teknologi, Warisan Nusantara memberi saya kesempatan untuk menjembatani keduanya. Ini bukan hanya platform budaya, tetapi juga tempat inovasi untuk generasi masa depan.</p>
+                <FaQuoteRight className="fi fi-sr-quote-right rotate-180 leading-none text-[#22282B] dark:text-white"/>
+                <p className="text-base md:text-lg font-medium text-[#1F2021] dark:text-white">Sebagai seseorang yang mencintai sejarah dan teknologi, Warisan Nusantara memberi saya kesempatan untuk menjembatani keduanya. Ini bukan hanya platform budaya, tetapi juga tempat inovasi untuk generasi masa depan.</p>
               </div>
               <div className="flex items-center gap-4">
                 <img src="/images/people/img2.jpg" className="h-12 w-12 rounded-full object-cover"/>
                 <div>
-                  <h4 className="text-mono-1000 text-lg font-semibold">Rina Santoso</h4>
-                  <p className="text-mono-700 text-center">Content Creator</p>
+                  <h4 className="text-lg font-semibold dark:text-white">Rina Santoso</h4>
+                  <p className="dark:text-white">Content Creator</p>
                 </div>
               </div>
             </div>
@@ -1118,7 +1119,7 @@ const Home = () => {
       <section id="contact">
         <div className="my-14 flex flex-row justify-center flex-wrap lg:flex-nowrap">
           <div
-              className="w-full lg:w-[30%] 2xl:w-[40%] px-5 lg:px-0 py-10 lg:pl-20 bg-[#0f172a] dark:bg-blue-600 lg:rounded-tr-xl lg:rounded-br-xl lg:mr-3">
+              className="w-full lg:w-[30%] 2xl:w-[40%] px-5 lg:px-0 py-10 lg:pl-20 bg-[#0f172a] lg:rounded-tr-xl lg:rounded-br-xl lg:mr-3">
                 <h2 className="font-bold text-3xl mb-3 lg:text-4xl text-white">Kontak</h2>
                 <div className="w-40 h-1 lg:h-2 rounded-full mb-5 lg:mb-10 bg-red-500"></div>
                 <p className="text-base text-white lg:text-lg">

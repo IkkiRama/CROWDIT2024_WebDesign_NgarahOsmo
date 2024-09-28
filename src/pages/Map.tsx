@@ -19,7 +19,7 @@ export default function Map() {
       <br />
       <br />
 
-      <h1 className="flex gap-3 justify-center items-center font-bold text-3xl">
+      <h1 className="flex dark:text-white gap-3 justify-center items-center font-bold text-3xl">
         <span className="bg-indigo-500 w-[50px] h-[50px] flex items-center justify-center text-white rounded-full">
           <FaMapLocation size={30} />
         </span>

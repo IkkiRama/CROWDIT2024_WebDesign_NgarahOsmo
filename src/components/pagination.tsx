@@ -3,7 +3,7 @@ export default function Pagination() {
     <div className="flex gap-1 justify-center mt-10">
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         &laquo;
       </a>
@@ -15,37 +15,37 @@ export default function Pagination() {
       </a>
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         2
       </a>
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         3
       </a>
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         4
       </a>
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         5
       </a>
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         6
       </a>
       <a
         href="#"
-        className="text-black py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
+        className="text-black dark:text-white py-1 md:px-4 px-3 md:text-base text-sm rounded hover:text-white hover:bg-red-400"
       >
         &raquo;
       </a>

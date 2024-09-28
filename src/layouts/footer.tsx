@@ -8,7 +8,7 @@ export default function Footer() {
       {/* client */}
       <div className="py-10 lg:px-[55px] lg:py-20 px-3">
         <div className="flex flex-wrap lg:mb-20 lg:flex-nowrap">
-            <h2 className="font-bold text-white text-3xl lg:text-4xl mb-3 lg:mr-20 ">MediaPartner</h2>
+            <h2 className="font-bold text-white text-3xl lg:text-4xl mb-3 lg:mr-20 ">Media Partner</h2>
             <p className=" text-white mb-10 lg:mb-0 max-w-[630px] lg:text-xl text-[15px]">
                 Media partner yang mendukung dan turut berkontribusi dalam memperluas jangkauan serta apresiasi terhadap karya-karya yang kami ciptakan.
             </p>
@@ -116,33 +116,33 @@ export default function Footer() {
                 <h2 className="text-white lg:mb-11 font-bold text-2xl mb-5 md:text-3xl">Tautan</h2>
                 <div className="flex flex-wrap">
                     <a href="/"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Beranda</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Beranda</a>
                     <a href="/news"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Event</a>
-                    <a href="#experience" className="text-white mb-4 w-full hover:text-blue-600 hover:underline
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Event</a>
+                    <a href="#experience" className="text-white mb-4 w-full hover:text-red-500 hover:underline
                         md:text-lg">Berita</a>
                     <a href="/subscription"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Subscription</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Subscription</a>
                     <a href="/map"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Peta Interaktif</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Peta Interaktif</a>
                     <a href="/ragam-indonesia"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Ragam Indonesia</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Ragam Indonesia</a>
                 </div>
             </div>
 
             <div className="my-10 w-full sm:w-1/2 lg:w-1/3">
                 <h2 className="text-white lg:mb-11 font-bold text-2xl mb-5 md:text-3xl">Social Media</h2>
                 <div className="flex flex-wrap">
-                    <a href="https://wa.link/iiqcmb"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">WhatsApp</a>
+                    <a href="https://wa.me/+6282133320489"
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">WhatsApp</a>
                     <a href="https://github.com/IkkiRama"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">GitHub</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">GitHub</a>
                     <a href="https://www.instagram.com/george_ikki/"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Instagram</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Instagram</a>
                     <a href="https://www.youtube.com/channel/UCDYgvHIUtwRDRfS4srHFQDg"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">Youtube</a>
-                    <a href="https://www.linkedin.com/in/rifki-romadhan-purbalingga/"
-                        className="text-white mb-4 w-full hover:text-blue-600 hover:underline md:text-lg">LinkedIn</a>
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">Youtube</a>
+                    <a href="https://www.linkedin.com/in/rifki-romadhan/"
+                        className="text-white mb-4 w-full hover:text-red-500 hover:underline md:text-lg">LinkedIn</a>
                 </div>
             </div>
 

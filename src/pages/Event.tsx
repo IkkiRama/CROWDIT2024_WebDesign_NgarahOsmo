@@ -26,7 +26,7 @@ export default function Event() {
           <span className="bg-red-500 text-white w-[50px] h-[50px] flex items-center justify-center rounded-xl">
             <IconListBullets className="w-[30px] h-[30px]" />
           </span>
-          <h3 className="text-2xl font-semibold">LIST EVENT</h3>
+          <h3 className="text-2xl font-semibold dark:text-white">LIST EVENT</h3>
         </div>
         <div className="grid lg:grid-cols-5 gap-10 items-center mt-10">
           <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
@@ -47,14 +47,14 @@ export default function Event() {
               RAGAM EVENT
             </h5>
             <span>
-              <h2 className="font-bold md:text-3xl text-gray-800 text-xl">
+              <h2 className="font-bold md:text-3xl text-gray-800 text-xl dark:text-white">
                 {"FESTIVAL GUNUNG SLAMET"}
               </h2>
             </span>
-            <p className="text-gray-800 mt-5 md:text-base text-[12px]">
+            <p className="text-gray-800 mt-5 md:text-base text-[12px] dark:text-white">
               Acara ini akan menjadi salah satu festival budaya terbesar di Jawa Tengah, menghadirkan berbagai kegiatan seperti pentas seni, pameran kerajinan lokal, dan kuliner tradisional. Setiap pengunjung akan mendapatkan pengalaman unik dan mendalam tentang kebudayaan masyarakat sekitar Gunung Slamet. Ayo, jangan lewatkan kesempatan ini untuk merasakan kekayaan budaya Nusantara dan menjadi bagian dari sejarah!
             </p>
-            <div className="flex gap-5 mt-10 text-gray-600 md:text-base text-sm">
+            <div className="flex gap-5 mt-10 text-gray-600 md:text-base text-sm dark:text-slate-200">
               <span className="flex gap-2 items-center">
                 <IconTicket />
                 <small>Rp 5.000</small>
@@ -70,7 +70,7 @@ export default function Event() {
             </div>
           </div>
         </div>
-        <div className="grid lg:grid-cols-5 gap-10 items-center mt-10">
+        <div className="grid lg:grid-cols-5 gap-10 items-center mt-10 ">
           <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
             <img
               src="/images/events/KKS.jpg"
@@ -89,14 +89,14 @@ export default function Event() {
               RAGAM EVENT
             </h5>
             <span>
-              <h2 className="font-bold md:text-3xl text-gray-800 text-xl">
+              <h2 className="font-bold md:text-3xl text-gray-800 text-xl dark:text-white">
                 {"KARYA KREATIVE SERAYU 2024"}
               </h2>
             </span>
-            <p className="text-gray-800 mt-5 md:text-base text-[12px]">
+            <p className="text-gray-800 mt-5 md:text-base text-[12px] dark:text-white">
               Karya Kreative Serayu 2024 akan menampilkan berbagai hasil karya kreatif dari seniman lokal dan nasional. Acara ini bertujuan untuk memperkenalkan seni dan budaya yang berkembang di sekitar wilayah Serayu, memberikan wadah bagi generasi muda untuk mengekspresikan kreativitas mereka. Jadilah bagian dari perayaan seni dan budaya ini, dengan berbagai kegiatan menarik seperti pameran seni, workshop, dan pertunjukan musik yang akan memanjakan para pengunjung.
             </p>
-            <div className="flex gap-5 mt-10 text-gray-600 md:text-base text-sm">
+            <div className="flex gap-5 mt-10 text-gray-600 md:text-base text-sm dark:text-slate-200">
               <span className="flex gap-2 items-center">
                 <IconTicket />
                 <small>Gratis</small>
