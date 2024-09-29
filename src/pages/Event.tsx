@@ -28,7 +28,7 @@ export default function Event() {
           </span>
           <h3 className="text-2xl font-semibold dark:text-white">LIST EVENT</h3>
         </div>
-        <div className="grid lg:grid-cols-5 gap-10 items-center mt-10">
+        <a href="/detail-event" className="grid lg:grid-cols-5 gap-10 items-center mt-10">
           <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
             <img
               src="/images/events/FGS.jpeg"
@@ -69,8 +69,8 @@ export default function Event() {
               </span>
             </div>
           </div>
-        </div>
-        <div className="grid lg:grid-cols-5 gap-10 items-center mt-10 ">
+        </a>
+        <a href="/detail-event" className="grid lg:grid-cols-5 gap-10 items-center mt-10 ">
           <div className="h-[350px] w-full rounded-md overflow-hidden lg:col-span-2">
             <img
               src="/images/events/KKS.jpg"
@@ -111,7 +111,7 @@ export default function Event() {
               </span>
             </div>
           </div>
-        </div>
+        </a>
 
         <Pagination />
       </section>

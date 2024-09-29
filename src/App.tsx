@@ -20,6 +20,7 @@ import Switcher from "./components/swicher";
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import DetailEvent from "./pages/DetailEvent";
 
 export default function App() {
   useEffect(() => {
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/news/read" element={<Detail />} />
           <Route path="/map" element={<Map />} />
           <Route path="/event" element={<Event />} />
+          <Route path="/detail-event" element={<DetailEvent />} />
         </Routes>
         <Footer />
       </Router>
