@@ -64,7 +64,7 @@ const Home = () => {
     <>
       <LightNavbar />
 
-      <header className="grid lg:grid-cols-2 relative z-10 overflow-hidden">
+      <header className="grid bg-white dark:bg-black min-h-[100vh] lg:grid-cols-2 relative z-10 overflow-hidden">
         {/* Background Gradient Circle */}
         <span
           className="w-[1000px] h-[1000px] rounded-full absolute -left-[500px] -top-[500px] -rotate-[60deg] animate-spin-slow"
@@ -75,12 +75,21 @@ const Home = () => {
         ></span>
 
         {/* Left Section */}
-        <section className="relative p-10 flex lg:flex-col sm:flex-row flex-col lg:items-end items-center lg:justify-end justify-between lg:order-1 order-2 lg:gap-0 gap-10">
+        <section className="md:pl-24 px-5 md:px-0 flex lg:flex-col sm:flex-row flex-col lg:items-start items-center lg:justify-center justify-between lg:order-1 order-2 lg:gap-0 gap-10 mb-10">
           
           {/* Big Title */}
-          <div className="lg:w-[80%] sm:w-[60%] w-full sm:order-1 order-2 lg:mb-10">
+          <div className="sm:hidden md:hidden flex mt-5 justify-center w-full sm:order-1 order-1 lg:mb-10">
             <h1
-              className="text-7xl font-semibold text-red-500 lg:inline-block hidden"
+              className="lg:text-8xl md:text-5xl sm:text-7xl text-3xl text-center font-semibold text-red-500"
+              data-aos="fade-right"
+            >
+              WARISAN NUSANTARA
+            </h1>
+          </div>
+
+          <div className="hidden lg:flex w-full sm:order-1 order-1 lg:mb-10">
+            <h1
+              className="lg:text-8xl md:text-5xl sm:text-7xl text-3xl font-semibold text-red-500"
               data-aos="fade-right"
             >
               WARISAN <br /> NUSANTARA
@@ -88,7 +97,7 @@ const Home = () => {
           </div>
 
           {/* Description Text */}
-          <div className="lg:w-[80%] sm:w-[60%] w-full sm:order-1 order-2 lg:mb-32">
+          <div className="w-full sm:order-1 order-2 lg:mb-32">
 
             <p
               className="text-sm lg:text-[16px] text-gray-800 dark:text-gray-200 animate-slide-right leading-6"
@@ -99,7 +108,7 @@ const Home = () => {
           </div>
 
           {/* Thumbnails Grid */}
-          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-2 lg:gap-5 gap-3 sm:order-2 order-1">
+          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-2 lg:gap-5 gap-3 sm:order-2 order-1 md:mr-24 lg:mr-0">
             {[
               { img: "/images/header/subheader2_thumb.jpg", delay: 900 },
               { img: "/images/header/subheader1_thumb.jpg", delay: 600 },
@@ -116,7 +125,7 @@ const Home = () => {
                 <img
                   src={thumb.img}
                   alt={`subheader${idx + 1}`}
-                  className="lg:w-[120px] w-full lg:h-[120px] h-[100%] rounded-md object-cover"
+                  className="lg:w-[120px] sm:w-[200px] w-full sm:h-[120px] h-[100%] rounded-md object-cover"
                 />
               </div>
             ))}
@@ -135,23 +144,23 @@ const Home = () => {
         </section>
 
         {/* Right Section with Image Background */}
-        <section className="lg:h-[800px] h-[550px] relative after:content-[''] after:absolute after:inset-0 after:bg-black/30 lg:order-2 order-1">
+        <section className="lg:h-[800px] text-center items-center flex justify-center flex-wrap w-full h-[300px] sm:h-full mt-12 lg:order-2 order-1">
           <img
             id="headerImg"
-            src="/images/header/Main Header.jpg"
+            src="/images/header/header.png"
             alt="headerImg"
             className="h-full w-full object-cover"
           />
-          
 
+          
           {/* Large Title */}
-          <h1
-            className="lg:hidden absolute lg:left-[10px] left-[5%] right-[5%] lg:right-[unset] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 lg:text-8xl sm:text-7xl text-4xl text-center font-semibold text-white z-10"
-            data-aos="fade-left"
-          >
-            <span className="text-red-500 block">WARISAN</span>
-            NUSANTARA
-          </h1>
+          {/* <div className="lg:hidden w-full mb-10 flex justify-center text-center z-10">
+            <h1
+              className="lg:text-8xl sm:text-7xl text-4xl font-semibold text-red-500"
+              data-aos="fade-left"
+              >WARISAN NUSANTARA</h1>
+          </div> */}
+          
         </section>
       </header>
 
@@ -963,8 +972,8 @@ const Home = () => {
               <p className="text-white mt-4">Lebih dari <span className="font-bold">100+ perusahaan</span> telah bekerja sama dengan Warisan Nusantara untuk melestarikan dan memajukan kekayaan budaya Indonesia.</p>
               
               <div className="mt-8 flex flex-col items-center gap-6 lg:flex-row">
-                <a href="wa.me/+6282133320489" className="flex items-center justify-center font-medium disabled:opacity-80 gap-2 h-12 min-w-[theme(spacing.36)] px-5 rounded-lg disabled:bg-white disabled:text-white-600 disabled:cursor-not-allowed text-red-500 bg-white hover:bg-white-200 w-full lg:w-fit outline outline-1 outline-white" type="button">Gabung Jadi Partner</a>
-                <a href="/partner" className="flex items-center justify-center font-medium disabled:opacity-80 gap-2 h-12 min-w-[theme(spacing.36)] px-5 rounded-lg disabled:bg-white disabled:text-white disabled:cursor-not-allowed bg-red-500 outline outline-1 outline-white hover:bg-red-600 text-white w-full lg:w-fit" type="button">Pelajari Lebih Lanjut <i className="fi fi-sr-arrow-right text-white-50 h-4 w-4"></i></a>
+                <a href="https://wa.me/+6282133320489" className="flex items-center justify-center font-medium disabled:opacity-80 gap-2 h-12 min-w-[theme(spacing.36)] px-5 rounded-lg disabled:bg-white disabled:text-white-600 disabled:cursor-not-allowed text-red-500 bg-white hover:bg-white-200 w-full lg:w-fit outline outline-1 outline-white" type="button">Gabung Jadi Partner</a>
+                <a href="/" className="flex items-center justify-center font-medium disabled:opacity-80 gap-2 h-12 min-w-[theme(spacing.36)] px-5 rounded-lg disabled:bg-white disabled:text-white disabled:cursor-not-allowed bg-red-500 outline outline-1 outline-white hover:bg-red-600 text-white w-full lg:w-fit" type="button">Pelajari Lebih Lanjut <i className="fi fi-sr-arrow-right text-white-50 h-4 w-4"></i></a>
               </div>
             </div>
             

@@ -30,6 +30,9 @@ const LightNavbar = () => {
     document.getElementById("navigation")?.classList.toggle("hidden");
     document.querySelector("nav")?.classList.add("!bg-black");
     document.querySelector("nav section div h2")?.classList.add("!text-white");
+    document.querySelector("#FaBars")?.classList.add("!text-white");
+    const menuHP = document.querySelectorAll("#navigation span");
+    menuHP.forEach(menu => menu?.classList.add("!text-white"))
 
     navOpen = !navOpen;
   };
@@ -49,6 +52,9 @@ const LightNavbar = () => {
     //   "#changeLanguage"
     // ) as HTMLElement;
     const h2Nav = document.querySelector("nav section div h2") as HTMLElement;
+    const FaBars = document.querySelector("#FaBars") as HTMLElement;
+    const menus =  document.querySelectorAll("#LaptopNavigation div .isNotActive") as NodeListOf<HTMLElement>;
+    // const menus =  Array.from(ArrMenus)
 
     const handleScroll = () => {
       nav.classList.toggle("!py-5", window.scrollY > 200);
@@ -67,6 +73,12 @@ const LightNavbar = () => {
         // changeLanguage.classList.toggle("!text-white", window.scrollY > 200);
 
         h2Nav.classList.toggle("!text-white", window.scrollY > 200);
+        FaBars.classList.toggle("!text-white", window.scrollY > 200);
+
+        menus.forEach( menu => {
+          menu.classList.toggle("!text-white", window.scrollY > 200);
+        });
+        
       }
     };
 
@@ -85,12 +97,12 @@ const LightNavbar = () => {
         <section className="flex justify-between">
           <div className="w-3/4 lg:w-1/4">
             <h2
-              className="text-[#111] font-semibold md:text-xl text-base"
+              className="text-[#111] font-semibold md:text-xl dark:text-white text-base"
             >
               <Link to={"/"}>Warisan Nusantara</Link>
             </h2>
           </div>
-          <div className="lg:flex gap-10 hidden items-center justify-end w-1/4 lg:w-1/2 ">
+          <div id="LaptopNavigation" className="lg:flex gap-10 hidden items-center justify-end w-1/4 lg:w-1/2 ">
             <div className="text-right text-white flex">
               <Link
                 to="/"
@@ -102,7 +114,7 @@ const LightNavbar = () => {
               <Link
                 to="/event"
               >
-                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white isNotActive flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                   Event
                 </span>
               </Link>
@@ -110,14 +122,14 @@ const LightNavbar = () => {
               <Link
                 to="/ragam-indonesia"
               >
-                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white isNotActive flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                   Ragam Indonesia
                 </span>
               </Link>
               <Link
                 to="/news"
               >
-                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+                <span className=" lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white isNotActive flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                   Berita
                 </span>
               </Link>
@@ -144,6 +156,8 @@ const LightNavbar = () => {
                 onClick={() => {
                   toggleNavigation();
                 }}
+                id="FaBars" 
+                className="text-black dark:text-white"
               >
                 <FaBars />
               </button>
@@ -159,7 +173,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className="  lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+              <span className="  lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                 <FaHome className="md:inline-block hidden" />
                 Beranda
               </span>
@@ -170,7 +184,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                 <FaBell className="md:inline-block hidden" />
                 Event
               </span>
@@ -181,7 +195,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                 <FaGlobe className="md:inline-block hidden" />
                 Ragam Indonesia
               </span>
@@ -192,7 +206,7 @@ const LightNavbar = () => {
                 toggleNavigation();
               }}
             >
-              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
+              <span className=" lg:text-[14px] text-[12px] cursor-pointer text-black dark:text-white flex gap-4 items-center justify-center rounded-full hover:text-red-500 md:px-3 px-3">
                 <FaNewspaper className="md:inline-block hidden" />
                 Berita
               </span>
